@@ -1,0 +1,115 @@
+
+body{
+    background-color: #F5F6F8;  
+}
+.content-area{
+
+    .sidebar{
+        background-color: #FBFCFE;
+        width: 250px;
+        position:fixed;
+        top:0;
+        height: 100%;
+        padding-top: 40px;
+        .profile-detail{
+        
+            padding: 0px 0px 20px;
+            margin:0px 20px;
+            border-bottom: 1px solid #ddd;
+            .user_wrap{
+                align-items: center;
+                .profile-image{
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                .profile-entry{
+                    padding: 0px 10px;
+                    h4{
+                        margin-bottom: 0;
+                    }
+                    span{
+                        color:#B3B3B3 ;
+                    }
+                }
+            }
+        }
+        .main-navigation{
+            padding: 20px 0px;
+            ul{
+                li{
+                    padding: 10px 0px;
+                    a{
+                        display: flex;
+                        color: $primary-color;
+                        font-weight: 500;
+                        transition: all 0.3s linear;
+                        span{
+                            padding: 0px 10px;
+                            font-weight: 600;
+                        }
+                    }
+                    &.active{
+                        a{
+                            color: #3F7AFC;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            color: #3F7AFC;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+.main-content{
+    margin-left: 270px;
+    height: 100%;
+    width: 100%;
+    
+    padding-right: 25px;
+    .stats-wrap{
+        .stat-single{
+            padding: 20px;
+            display: flex;
+            box-shadow: 0px 6px 18px 0px #dddddd87;
+            border-radius: 4px;
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+            .icon-holder{
+                background-color: #D7FFEA;
+                padding: 15px;
+                flex:1;
+                display: flex;
+                height: 50px;
+                width: 50px;
+                justify-content: center;
+                align-items: center;
+            
+                .fa{
+                    color: #3CB878;
+                    font-size: 28px;
+                }
+            }
+            .stat-entry{
+                flex: 3;
+                padding: 0px 10px;
+                h4{
+                    margin-bottom: 0;
+                    font-weight: 500;
+                    color: #A8A8A8;
+                    font-size: 16px;
+                }
+                span{
+                    color:#000;
+                    font-size: 24px;
+                }
+            }
+            
+        }
+    }
+}

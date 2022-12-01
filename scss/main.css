@@ -819,8 +819,10 @@ img {
 }
 
 .header {
-  -webkit-box-shadow: 0px 6px 18px 0px #ddd;
-          box-shadow: 0px 6px 18px 0px #ddd;
+  -webkit-box-shadow: 0px 6px 18px 0px #dddddd7a;
+          box-shadow: 0px 6px 18px 0px #dddddd7a;
+  z-index: 99;
+  position: relative;
 }
 
 .header .logo-wrap {
@@ -831,7 +833,7 @@ img {
 }
 
 .header .logo-wrap .item-image-holder {
-  padding-bottom: 25%;
+  padding-bottom: 21%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -861,6 +863,8 @@ img {
   background-repeat: no-repeat;
   background-size: 22px;
   padding-left: 45px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .header .search-wrap form input::-webkit-input-placeholder {
@@ -885,6 +889,16 @@ img {
   color: #7F839A;
   font-weight: 600;
   font-size: 15px;
+}
+
+.header .search-wrap form input:focus {
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+.header .search-wrap form input:active {
+  border-bottom: 1px solid #ddd;
+  outline: none;
 }
 
 .header .notification_wrap {
@@ -914,5 +928,155 @@ img {
   display: inline-block;
   font-size: 12px;
   line-height: 1.4;
+}
+
+.header .profile_wrap .profile-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #F5F6F8;
+}
+
+.content-area .sidebar {
+  background-color: #FBFCFE;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  padding-top: 40px;
+}
+
+.content-area .sidebar .profile-detail {
+  padding: 0px 0px 20px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content-area .sidebar .profile-detail .user_wrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-area .sidebar .profile-detail .user_wrap .profile-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.content-area .sidebar .profile-detail .user_wrap .profile-entry {
+  padding: 0px 10px;
+}
+
+.content-area .sidebar .profile-detail .user_wrap .profile-entry h4 {
+  margin-bottom: 0;
+}
+
+.content-area .sidebar .profile-detail .user_wrap .profile-entry span {
+  color: #B3B3B3;
+}
+
+.content-area .sidebar .main-navigation {
+  padding: 20px 0px;
+}
+
+.content-area .sidebar .main-navigation ul li {
+  padding: 10px 0px;
+}
+
+.content-area .sidebar .main-navigation ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7F839A;
+  font-weight: 500;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.content-area .sidebar .main-navigation ul li a span {
+  padding: 0px 10px;
+  font-weight: 600;
+}
+
+.content-area .sidebar .main-navigation ul li.active a {
+  color: #3F7AFC;
+}
+
+.content-area .sidebar .main-navigation ul li:hover a {
+  color: #3F7AFC;
+}
+
+.main-content {
+  margin-left: 270px;
+  height: 100%;
+  width: 100%;
+  padding-right: 25px;
+}
+
+.main-content .stats-wrap .stat-single {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 6px 18px 0px #dddddd87;
+          box-shadow: 0px 6px 18px 0px #dddddd87;
+  border-radius: 4px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.main-content .stats-wrap .stat-single .icon-holder {
+  background-color: #D7FFEA;
+  padding: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .stats-wrap .stat-single .icon-holder .fa {
+  color: #3CB878;
+  font-size: 28px;
+}
+
+.main-content .stats-wrap .stat-single .stat-entry {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 0px 10px;
+}
+
+.main-content .stats-wrap .stat-single .stat-entry h4 {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #A8A8A8;
+  font-size: 16px;
+}
+
+.main-content .stats-wrap .stat-single .stat-entry span {
+  color: #000;
+  font-size: 24px;
 }
 /*# sourceMappingURL=main.css.map */
