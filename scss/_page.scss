@@ -11,6 +11,7 @@ body{
         top:0;
         height: 100%;
         padding-top: 40px;
+        left: 0;
         .profile-detail{
         
             padding: 0px 0px 20px;
@@ -72,44 +73,284 @@ body{
     
     padding-right: 25px;
     .stats-wrap{
-        .stat-single{
-            padding: 20px;
-            display: flex;
-            box-shadow: 0px 6px 18px 0px #dddddd87;
-            border-radius: 4px;
-            flex-direction: row;
-            align-items: center;
-            height: 100%;
-            .icon-holder{
-                background-color: #D7FFEA;
-                padding: 15px;
-                flex:1;
+        .col-lg-3{
+            .stat-single{
+                padding: 20px;
+                border: 1px solid transparent;
                 display: flex;
-                height: 50px;
-                width: 50px;
-                justify-content: center;
+                box-shadow: 0px 6px 18px 0px #dddddd87;
+                border-radius: 4px;
+                flex-direction: row;
                 align-items: center;
-            
-                .fa{
-                    color: #3CB878;
-                    font-size: 28px;
+                height: 100%;
+                transition: all 0.3s linear;
+                cursor: pointer;
+                .icon-holder{
+                    background-color: #D7FFEA;
+                    padding: 15px;
+                    flex:1;
+                    display: flex;
+                    height: 50px;
+                    width: 50px;
+                    justify-content: center;
+                    align-items: center;
+                
+                    i{
+                        color: #3CB878;
+                        font-size: 28px;
+                    }
+                }
+                .stat-entry{
+                    flex: 3;
+                    padding: 0px 10px;
+                    h4{
+                        margin-bottom: 5px;
+                        font-weight: 500;
+                        color: #A8A8A8;
+                        font-size: 16px;
+                        transition: all 0.5s linear;
+                    }
+                    span{
+                        color:#000;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+               &:hover{
+                box-shadow: none;
+                border: 1px solid #f5f5f5;
+                .stat-entry{
+                    h4{
+                        color: #3CB878;
+                        font-weight: 600;
+                    }
+                }
+               }
+            }
+            &:nth-child(2){
+                .stat-single{
+                    .icon-holder{
+                        background-color: #E1F1FF;
+                        i{
+                            color: #3F7AFC;
+                        }
+                    }
+                    &:hover{
+                        .stat-entry{
+                            h4{
+                                color: #3F7AFC;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+               
+            }
+            &:nth-child(3){
+                .stat-single{
+                    .icon-holder{
+                        background-color: #FFF2DB;
+                        i{
+                            color: #FFA001;
+                        }
+                    }
+                    &:hover{
+                        .stat-entry{
+                            h4{
+                                color:#FFA001;
+                                font-weight: 600;
+                            }
+                        }
+                    }
                 }
             }
-            .stat-entry{
-                flex: 3;
-                padding: 0px 10px;
-                h4{
-                    margin-bottom: 0;
-                    font-weight: 500;
-                    color: #A8A8A8;
-                    font-size: 16px;
-                }
-                span{
-                    color:#000;
-                    font-size: 24px;
+            &:nth-child(4){
+                .stat-single{
+                    .icon-holder{
+                        background-color: #FFEAEA;
+                        i{
+                            color: #FF0000;
+                        }
+                    }
+                    &:hover{
+                        .stat-entry{
+                            h4{
+                                color:#FF0000;
+                                font-weight: 600;
+                            }
+                        }
+                    }
                 }
             }
-            
+        }
+
+        
+    }
+    .bottom-content{
+        .assignment-card{
+            .card-body{
+                padding-top: 0;
+                ul{
+                    margin-left: 0;
+                   
+                    li{
+                        border-bottom: 1px solid #ddd;
+                        padding: 15px 0px;
+                        .item-left{
+                            h3{
+                                font-size: 18px;
+                                text-transform: capitalize;
+                                margin-bottom: 10px;
+                            }
+                            .status-entry{
+                                .status{
+                                    p{
+                                        color: #3CB878;
+                                        padding-right: 20px;
+                                        margin-bottom: 10px;
+                                    }
+                                   span{
+                                    color: $primary-color;
+                                   }
+                                }
+                                .progressbar {
+                                    background: #ccc;
+                                    
+                                    border-radius: 20px;
+                                    width: 70%;
+                                    display: block;
+                                    height: 5px;
+                                    margin-bottom: 10px;
+                            
+                                    position: relative;
+                                    
+                                    > span {
+                                      display: block;
+                                      border-radius: 20px;
+                                      height: 5px;
+                                      top: 0;
+                                      left: 0;
+                                      position: absolute;
+                                      overflow: hidden;
+                                      transition: width 2s ease-out;
+                                    }
+                                  }
+                                &.incomplete{
+                                    p{
+                                        color: #3CB878;
+                                     
+                                    }
+                                    .progressbar{
+                                        span{
+                                            background-color: #3CB878;
+                                        }
+                                    }
+                                }
+                                &.complete{
+                                    p{
+                                        color: #3F7AFC;
+                                     
+                                    }
+                                    .progressbar{
+                                        
+                                        span{
+                                            background-color: #3F7AFC;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .deadline-wrap{
+                            p{
+                                margin-bottom: 5px;
+                                font-size: 15px;
+                                color: #7F839A;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .course-card{
+            .card-body{
+                ul{
+                    li{
+                        border-bottom: 1px solid #ddd;
+                        padding: 15px 0px;
+                        .item-image-holder{
+                            margin-bottom: 0;
+                            padding-bottom: 100%;
+                           
+                           
+                        }
+                        .item-mid{
+                            h4{
+                                font-size: 16px;
+                                text-transform: capitalize;
+                                margin-bottom: 5px;
+                            }
+                            p{
+                                margin-bottom: 10px;
+                                font-size: 14px;
+                                color: #7F839A;
+                            }
+                        }
+                        .deadline-wrap{
+                            p{
+                                margin-bottom: 5px;
+                                font-size: 14px;
+                                color: #7F839A;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .attendence-card{
+            .card-body{
+                .chart-index{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    h5{
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                    }
+                }
+              
+                .chart-wrapper{
+                    width: 100%;
+                    height: 100%;
+                    canvas{
+                       
+                    }
+                }
+            }
+        }
+        .activities-card{
+            .card-body{
+                ul{
+                    li{
+                        padding: 15px 0px;
+                        border-bottom: 1px solid #ddd;
+                        .item-left{
+                            h4{
+                                margin-bottom: 5px;
+                                font-size: 18px;
+                            }
+                            p{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+              
+            }
         }
     }
 }

@@ -354,7 +354,6 @@ h6 {
 }
 
 p {
-  margin: 0 0 15px 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -818,11 +817,82 @@ img {
   position: fixed;
 }
 
+.card {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 6px 18px 0px #dddddd87;
+          box-shadow: 0px 6px 18px 0px #dddddd87;
+  border-radius: 4px;
+  height: 100%;
+}
+
+.card .card-title {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.card .card-title h3 {
+  font-weight: 700;
+  display: inline-block;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.card .card-title p {
+  color: #7F839A;
+  margin-bottom: 0;
+  margin: 0px;
+  float: right;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.card .card-title a {
+  float: right;
+  color: #7F839A;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.card .card-body {
+  height: 300px;
+  padding-top: 0;
+  overflow-y: scroll;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.card .card-body::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 30px;
+}
+
+.card .card-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 30px;
+}
+
+.card .card-body::-webkit-scrollbar-thumb {
+  background: #7F839A;
+  border-radius: 30px;
+}
+
+.card .card-body::-webkit-scrollbar-thumb:hover {
+  background: #7F839A;
+}
+
 .header {
   -webkit-box-shadow: 0px 6px 18px 0px #dddddd7a;
           box-shadow: 0px 6px 18px 0px #dddddd7a;
   z-index: 99;
   position: relative;
+  background-color: white;
 }
 
 .header .logo-wrap {
@@ -948,6 +1018,7 @@ body {
   top: 0;
   height: 100%;
   padding-top: 40px;
+  left: 0;
 }
 
 .content-area .sidebar .profile-detail {
@@ -1019,8 +1090,9 @@ body {
   padding-right: 25px;
 }
 
-.main-content .stats-wrap .stat-single {
+.main-content .stats-wrap .col-lg-3 .stat-single {
   padding: 20px;
+  border: 1px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1035,9 +1107,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
 }
 
-.main-content .stats-wrap .stat-single .icon-holder {
+.main-content .stats-wrap .col-lg-3 .stat-single .icon-holder {
   background-color: #D7FFEA;
   padding: 15px;
   -webkit-box-flex: 1;
@@ -1056,27 +1131,226 @@ body {
           align-items: center;
 }
 
-.main-content .stats-wrap .stat-single .icon-holder .fa {
+.main-content .stats-wrap .col-lg-3 .stat-single .icon-holder i {
   color: #3CB878;
   font-size: 28px;
 }
 
-.main-content .stats-wrap .stat-single .stat-entry {
+.main-content .stats-wrap .col-lg-3 .stat-single .stat-entry {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
   padding: 0px 10px;
 }
 
-.main-content .stats-wrap .stat-single .stat-entry h4 {
-  margin-bottom: 0;
+.main-content .stats-wrap .col-lg-3 .stat-single .stat-entry h4 {
+  margin-bottom: 5px;
   font-weight: 500;
   color: #A8A8A8;
   font-size: 16px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
-.main-content .stats-wrap .stat-single .stat-entry span {
+.main-content .stats-wrap .col-lg-3 .stat-single .stat-entry span {
   color: #000;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-content .stats-wrap .col-lg-3 .stat-single:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #f5f5f5;
+}
+
+.main-content .stats-wrap .col-lg-3 .stat-single:hover .stat-entry h4 {
+  color: #3CB878;
+  font-weight: 600;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(2) .stat-single .icon-holder {
+  background-color: #E1F1FF;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(2) .stat-single .icon-holder i {
+  color: #3F7AFC;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(2) .stat-single:hover .stat-entry h4 {
+  color: #3F7AFC;
+  font-weight: 600;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(3) .stat-single .icon-holder {
+  background-color: #FFF2DB;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(3) .stat-single .icon-holder i {
+  color: #FFA001;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(3) .stat-single:hover .stat-entry h4 {
+  color: #FFA001;
+  font-weight: 600;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(4) .stat-single .icon-holder {
+  background-color: #FFEAEA;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(4) .stat-single .icon-holder i {
+  color: #FF0000;
+}
+
+.main-content .stats-wrap .col-lg-3:nth-child(4) .stat-single:hover .stat-entry h4 {
+  color: #FF0000;
+  font-weight: 600;
+}
+
+.main-content .bottom-content .assignment-card .card-body {
+  padding-top: 0;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul {
+  margin-left: 0;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0px;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry .status p {
+  color: #3CB878;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry .status span {
+  color: #7F839A;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry .progressbar {
+  background: #ccc;
+  border-radius: 20px;
+  width: 70%;
+  display: block;
+  height: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry .progressbar > span {
+  display: block;
+  border-radius: 20px;
+  height: 5px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transition: width 2s ease-out;
+  transition: width 2s ease-out;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry.incomplete p {
+  color: #3CB878;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry.incomplete .progressbar span {
+  background-color: #3CB878;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry.complete p {
+  color: #3F7AFC;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .item-left .status-entry.complete .progressbar span {
+  background-color: #3F7AFC;
+}
+
+.main-content .bottom-content .assignment-card .card-body ul li .deadline-wrap p {
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #7F839A;
+}
+
+.main-content .bottom-content .course-card .card-body ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0px;
+}
+
+.main-content .bottom-content .course-card .card-body ul li .item-image-holder {
+  margin-bottom: 0;
+  padding-bottom: 100%;
+}
+
+.main-content .bottom-content .course-card .card-body ul li .item-mid h4 {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.main-content .bottom-content .course-card .card-body ul li .item-mid p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #7F839A;
+}
+
+.main-content .bottom-content .course-card .card-body ul li .deadline-wrap p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #7F839A;
+}
+
+.main-content .bottom-content .attendence-card .card-body .chart-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-content .bottom-content .attendence-card .card-body .chart-index h5 {
+  margin-bottom: 10px;
+}
+
+.main-content .bottom-content .attendence-card .card-body .chart-index p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.main-content .bottom-content .attendence-card .card-body .chart-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content .bottom-content .activities-card .card-body ul li {
+  padding: 15px 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-content .bottom-content .activities-card .card-body ul li .item-left h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.main-content .bottom-content .activities-card .card-body ul li .item-left p {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */
