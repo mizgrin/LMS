@@ -1,16 +1,65 @@
 .header{
 	box-shadow: 0px 6px 18px 0px #ddd;
 	.logo-wrap{
+		padding: 0px 15px;
+		align-items: center;
 		.item-image-holder{
-			padding-bottom: 40%;
+			padding-bottom: 25%;
 			flex:1;
+			transform: rotate(-20deg);
+			margin-bottom: 0;
 		}
 		h3{
 			color: #3F7AFC;
 			flex: 3;
+			padding: 0px 5px;
+			margin-bottom: 0;
 			span{
 				color: #FFA001;
 			}
+		}
+	}
+	.search-wrap{
+		form{
+			input{
+				border:0;
+				padding-bottom: 0;
+				background-image: url(../images/search.png);
+			    background-position: 15px 70%;
+				background-repeat: no-repeat;
+				background-size: 22px;
+				padding-left: 45px;
+				&::placeholder{
+					color: #7F839A;
+					font-weight: 600;
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.notification_wrap{
+		width: auto;
+		text-align: center;
+		.icon-wrap{
+			display: inline-block;
+			i{
+				font-size: 24px;
+				color: $primary-color;
+			}
+		}
+		sup{
+			background-color: #FFA001;
+			position: absolute;
+			color: white;
+			right: -10px;
+			top:-10px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			text-align: center;
+			display: inline-block;
+			font-size: 12px;
+			line-height: 1.4;
 		}
 	}
 }
