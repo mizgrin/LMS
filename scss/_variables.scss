@@ -10,11 +10,12 @@ $break-normal:1499px;
 
 
 @mixin responsivescroll {
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: $break-medium) {
     max-width: 100%;
     display: inline-flex;
     vertical-align: top;
     overflow-x: scroll;
+    flex-wrap:nowrap;
     }
 }
 

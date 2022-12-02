@@ -1,6 +1,9 @@
 jQuery(document).ready(function ($) {
 
-
+$(".mobile-menu").click(function(){
+  console.log("red");
+  $(".sidebar").toggleClass("active");;
+})
 
 
 
@@ -13,13 +16,7 @@ function createChart(chartId, chartData) {
     });
   };
 
-  $.each($(".menu-item-has-children"), function (i, d) {
-    $(d).append(`
-          <button class="dropdown-toggle">
-              <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          </button>
-      `)
-  });
+  
 
   var headHeight = $(".header").height();
   console.log(headHeight);
