@@ -212,7 +212,11 @@ body{
                    
                     li{
                         border-bottom: 1px solid #ddd;
-                        padding: 15px 0px;
+                        padding: 15px 10px;
+                        transition: all 0.3s linear;
+                        &:hover{
+                            box-shadow: 2px 2px 10px 2px #ddd;
+                        }
                         .item-left{
                             h3{
                                 font-size:  1.125em;
@@ -284,6 +288,7 @@ body{
                                 font-size:  0.9375em;
                                 color: #7F839A;
                             }
+                            
                         }
                     }
                 }
@@ -294,7 +299,11 @@ body{
                 ul{
                     li{
                         border-bottom: 1px solid #ddd;
-                        padding: 15px 0px;
+                        padding: 15px 10px;
+                        transition: all 0.3s linear;
+                        &:hover{
+                            box-shadow: 2px 2px 10px 2px #ddd;
+                        }
                         .item-image-holder{
                             margin-bottom: 0;
                             padding-bottom: 100%;
